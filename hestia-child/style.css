@@ -1,0 +1,586 @@
+/*
+Theme Name: hestia-child
+Theme URI: https://themeisle.com/themes/hestia/
+Template: hestia
+Author: ThemeIsle
+Author URI: https://themeisle.com
+Description: Hestia is a modern WordPress theme for professionals. It fits creative business, small businesses (restaurants, wedding planners, sport/medical shops), startups, corporate businesses, online agencies and firms, portfolios, ecommerce (WooCommerce), and freelancers. It has a multipurpose one-page design, widgetized footer, blog/news page and a clean look, is compatible with: Flat Parallax Slider, Photo Gallery, Travel Map and Elementor Page Builder . The theme is responsive, WPML, Retina ready, SEO friendly, and uses Material Kit for design.
+Tags: blog,custom-logo,portfolio,e-commerce,rtl-language-support,post-formats,grid-layout,one-column,two-columns,custom-background,custom-colors,custom-header,custom-menu,featured-image-header,featured-images,flexible-header,full-width-template,sticky-post,theme-options,threaded-comments,translation-ready
+Version: 2.4.5
+*/
+
+
+
+@media only screen and (min-width: 320px) /* first mobile */
+/* bug photo page accueil*/
+
+{
+	.page-header
+	{
+		margin: 0px 0px;
+	}
+
+
+	/* bloc liens utiles */
+	.icon-box
+	{
+		margin-top: 20px;
+	}
+
+	/* font awesome */
+	.icon
+	{
+		color: #25dbc9;
+		font-size: 30px;
+	}
+
+	/* cercle font awesome */
+	.icon
+	{
+		left: 35%;
+		border: 1px solid #25dbc9;
+		padding: 20px 5px 10px 26px;
+		border-radius: 50%;
+		height: 85px;
+		width: 85px;
+	}
+
+	/* display none menu footer de base */
+	ul.footer-menu.pull-left
+	{
+		display: none;
+	}
+
+	/* display none copyright hestia footer de base */
+	.copyright.pull-right
+	{
+		display: none;
+	}
+
+	/*titre office du tourisme de Nouméa */
+	#titre-office
+	{
+		color: #25dbc9;
+		font-size: 25px; 
+		text-align: center;
+	}
+
+
+	/* Animation cachée */
+	.animation
+	{
+		display: none;
+	}
+
+	/*centrage icons */
+	.icon-box
+	{
+		margin-left: 70px;
+	}
+
+}
+
+@media only screen and (min-width: 768px) /* tablette */
+
+{
+	#titre-office
+	{
+		font-size: 35px;
+	}
+
+	.icon-box
+	{
+		margin-left: 250px;
+	}
+}
+
+@media only screen and (min-width: 1100px) /* Desktop */
+
+{
+	/*bug couleur navbar*/
+	.navbar-default .navbar-nav > li > a
+	{
+		color: inherit;
+	}
+
+	/* couleur navbar hover turquoise*/
+	.navbar-default .navbar-nav > li > a:hover
+	{
+		color: #25dbc9;
+	}
+
+	/* couleur loupe recherche navbar hover turquoise*/
+	li:hover
+	{
+		color: #25dbc9;
+	}
+
+	/* bug trait navbar*/
+	.navbar-default
+	{
+		border-color: transparent;
+	}
+
+	/* hover tab activité du mois */
+	tr:hover
+	{
+		color: #25dbc9;
+	}
+
+	/*bug souligné sous titre dernier article publié page Accueil*/
+	a:hover, a:focus
+	{
+		text-decoration: none;
+	}
+
+	/* bloc liens utiles */
+	.icon-box
+	{
+		margin-left: 60px;
+	}
+
+	#titre-office
+	{
+		font-size: 43px;
+
+	}
+
+	/* placement de l'animation css*/
+	.animation
+	{
+		display: initial; 
+		position: relative;
+		top: 350px;
+	}
+
+	/* placement div vagues */
+	#waves
+	{
+		position: relative;
+	}
+
+	/* vague front turquoise */
+	#frontwave
+	{
+		background: url(wave11.png) repeat-x top;
+		height: 100px;
+		position: absolute;
+		top:0px;
+		left: 0;
+		width: 100%;
+		-webkit-animation:"wave11" 3s infinite; /* déclaration animation vague front turquoise Safari, Opéra, Chrome  */
+		animation: frontwave 3s infinite; /* déclaration animation vague front turquoise : Tous les autres navigateurs */
+		z-index: 3;
+	}
+
+	/* mouvements vagues front turquoise: Safari, Opéra, Chrome */
+	@-webkit-keyframes wave11 
+	{
+		0%
+		{
+			margin-top: 0;
+		}
+
+		50%
+		{
+			margin-top: 8px;
+		}
+
+		100%
+		{
+			margin-top: 0;
+		}
+	}
+
+	/* mouvements vagues front turquoise: Tous les autres navigateurs */
+	@keyframes frontwave
+	{
+		0%
+		{
+			margin-top: 0;
+		}
+
+		50%
+		{
+			margin-top: 8px;
+		}
+
+		100%
+		{
+			margin-top: 0;
+		}
+	}
+
+	/* vague back grisée */
+	#backwave
+	{
+		background: url(wave222.png) repeat-x top;
+		height: 64px;
+		position: absolute;
+		top:-1px;
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		-webkit-animation:"wave222" 3s infinite;
+		animation: backwave 3s infinite; 
+	}
+
+	/*mouvements vagues back grisées : Safari, Opéra, Chrome */
+	@-webkit-keyframes wave222
+	{
+		0%
+		{
+			margin-top: 0;
+		}
+
+		50%
+		{
+			margin-top: -8px;
+		}
+
+		100%
+		{
+			margin-top: 0;
+		}
+	}
+    /* Tous les autres navigateurs*/
+	@keyframes backwave
+	{
+		0%
+		{
+			margin-top: 0;
+		}
+
+		50%
+		{
+			margin-top: -8px;
+		}
+
+		100%
+		{
+			margin-top: 0;
+		}
+	}
+
+
+	/* positionnement div flots ->boat */
+	.flots
+	{
+		position: absolute;
+		width: 100%;
+		left: 70%;
+		top: -200px;
+		z-index: 2;
+		-webkit-animation:"flots" 3s infinite;
+		animation: flots 3s infinite;
+		
+	}
+
+	/* mouvement div flots -> boat */
+	@-webkit-keyframes flots
+	{
+		0%
+		{
+			margin-top:0;
+		}
+
+		50%
+		{
+			margin-top: 1px;
+			-webkit-transform:rotate(1deg);
+		}
+
+		100%
+		{
+			margin-top:0;
+		}
+	}
+
+	@keyframes flots
+	{
+		0%
+		{
+			margin-top:0;
+		}
+
+		50%
+		{
+			margin-top: 1px;
+			-webkit-transform:rotate(1deg);
+		}
+
+		100%
+		{
+			margin-top:0;
+		}
+	}
+
+
+	/* positionnement et taille boat */
+	.boat
+	{
+		background: url(boat1.png) no-repeat;
+		height: 276px;
+		width: 100%;
+		margin-left: 100px;
+		z-index: 2;
+		-webkit-animation:"boat1" 180s infinite;
+		animation: boat 180s infinite;
+	}
+
+	/* mouvement boat */
+	@-webkit-keyframes boat1
+	{
+		0%
+		{
+			margin-left: 300px;
+		}
+
+		50%
+		{
+			margin-left: -800px;
+		}
+
+		100%
+		{
+			margin-left: -800px;
+		}
+	}
+
+	@keyframes boat
+	{
+		0%
+		{
+			margin-left: 300px;
+		}
+
+		50%
+		{
+			margin-left: -800px;
+		}
+
+		100%
+		{
+			margin-left: -800px;
+		}
+	}
+	
+	/* positionnement div fish ->poisson */
+	.fish
+	{
+		position: absolute;
+		width: 100%;
+		left: 70%;
+		top: 0px;
+		z-index: 2;
+		-webkit-animation:"fish" 3s infinite;
+		animation: fish 180s infinite;
+	}
+
+	/* mouvement div fish de haut en bas->poisson */
+	@-webkit-keyframes fish
+	{
+		0%
+		{
+			margin-top:0;
+		}
+
+		50%
+		{
+			margin-top: 1px;
+			-webkit-transform:rotate(2deg);
+		}
+
+		100%
+		{
+			margin-top:0;
+		}
+	}
+	
+	@keyframes fish
+	{
+		0%
+		{
+			margin-top:0;
+		}
+
+		50%
+		{
+			margin-top: 1px;
+			-webkit-transform:rotate(2deg);
+		}
+
+		100%
+		{
+			margin-top:0;
+		}
+	}
+
+	/* positionnement et taille poisson */
+	.poisson
+	{
+		background: url(poisson1.png) no-repeat;
+		height: 47px;
+		width: 100%;
+		margin-left: 100px;
+		z-index: 2;
+		-webkit-animation:"poisson1" 25s infinite;
+		animation: poisson 25s infinite;
+	}
+
+	/* mouvement poisson */
+	@-webkit-keyframes poisson1
+	{
+		0%
+		{
+			margin-left: -200px;
+			
+		}
+
+		25%
+		{
+			margin-left: -300px;
+		}
+
+		50%
+		{
+			margin-left: -600px;
+		}
+
+		75%
+		{
+			margin-left: -700px;
+		}
+
+		100%
+		{
+			margin-left: -800px;
+		}
+	}
+
+	@keyframes poisson
+	{
+		0%
+		{
+			margin-left: -200px;
+			
+		}
+
+		25%
+		{
+			margin-left: -300px;
+		}
+
+		50%
+		{
+			margin-left: -600px;
+		}
+
+		75%
+		{
+			margin-left: -700px;
+		}
+
+		100%
+		{
+			margin-left: -800px;
+		}
+	}
+
+	.sun
+	{
+		position: absolute;
+		width: 100%;
+		left: 70%;
+		top: -300px;
+		z-index: 2;
+		-webkit-animation:"sun" 180s infinite;
+		animation: sun 180s infinite;
+	}
+
+	/* mouvement div sun -> soleil */
+	@-webkit-keyframes sun
+	{
+		0%
+		{
+			margin-top:0;
+		}
+
+		50%
+		{
+			margin-top: 1px;
+		}
+
+		100%
+		{
+			margin-top:0;
+		}
+	}
+
+	@keyframes sun
+	{
+		0%
+		{
+			margin-top:0;
+		}
+
+		50%
+		{
+			margin-top: 1px;
+		}
+
+		100%
+		{
+			margin-top:0;
+		}
+	}
+
+	/* positionnement et taille soleil */
+	.soleil
+	{
+		background: url(soleil1.png) no-repeat;
+		height: 300px;
+		width: 100%;
+		margin-left: -800px;
+		z-index: 2;
+		-webkit-animation:"soleil" 360s infinite;
+		animation: soleil 360s infinite;
+	}
+
+	/* mouvement soleil */
+	@-webkit-keyframes soleil
+	{
+		0%
+		{
+			margin-right: 0px;
+		}
+
+		50%
+		{
+			margin-left: 100px;
+		}
+
+		100%
+		{
+			margin-left: 200px;
+		}
+	}
+
+	@keyframes soleil
+	{
+		0%
+		{
+			margin-right: 0px;
+		}
+
+		50%
+		{
+			margin-left: 100px;
+		}
+
+		100%
+		{
+			margin-left: 200px;
+		}
+	}
+}
